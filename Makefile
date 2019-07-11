@@ -1,4 +1,4 @@
 all: build
 
 build:
-	@docker build -t cppinsights-docker-base `pwd`
+	@docker build -t andreasfertig/cppinsights-docker-base `pwd`
