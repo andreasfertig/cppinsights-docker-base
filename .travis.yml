@@ -7,3 +7,11 @@ script:
     docker tag andreasfertig/cppinsights-docker-base $DOCKER_USERNAME/cppinsights-docker-base
     docker push $DOCKER_USERNAME/cppinsights-docker-base
   fi
+
+after_script:
+- |
+  if [[ "${TRAVIS_BRANCH}" = "master" ]] && [[ "${TRAVIS_PULL_REQUEST}" == "false" ]]; then
+    cd ${TRAVIS_BUILD_DIR}
+    wget -c https://raw.githubusercontent.com/andreasfertig/travisci-trigger-build/master/trigger_travisci_build.sh
+    bash trigger_travisci_build.sh > /dev/null
+  fi
