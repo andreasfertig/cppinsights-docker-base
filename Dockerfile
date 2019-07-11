@@ -11,7 +11,7 @@ RUN apt-get update &&                                                           
     apt-get update && apt-get install -y --no-install-recommends libstdc++-7-dev libclang-${CLANG_VERSION}-dev &&  \
     apt-get remove --purge --auto-remove -y --force-yes wget dirmngr &&                             \
     apt-get clean &&                                                                                \
-    rm -rf /var/lib/apt/lists/*                                                                     \
+    rm -rf /var/lib/apt/lists/* &&                                                                  \
     useradd insights &&                                                                             \
-    mkdir /home/insights &&                                                                         \
+    mkdir /home/insights &&                                                                         \ 
     chown -R insights:insights /home/insights
