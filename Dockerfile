@@ -2,7 +2,7 @@ FROM ubuntu:18.04
 
 LABEL maintainer "Andreas Fertig"
 
-ENV CLANG_VERSION=8
+ENV CLANG_VERSION=9
 
 RUN apt-get update &&                                                                               \
     apt-get install -y --no-install-recommends ca-certificates gnupg wget &&                        \
