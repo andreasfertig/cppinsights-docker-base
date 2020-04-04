@@ -2,7 +2,7 @@ FROM ubuntu:18.04
 
 LABEL maintainer "Andreas Fertig"
 
-ENV CLANG_VERSION=9
+ENV CLANG_VERSION=10
 ENV GCC_VERSION=8
 
 RUN apt-get update &&                                                                               \
