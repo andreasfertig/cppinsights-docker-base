@@ -2,7 +2,7 @@ FROM ubuntu:21.04
 
 LABEL maintainer "Andreas Fertig"
 
-ENV CLANG_VERSION=14
+ENV CLANG_VERSION=15
 ENV GCC_VERSION=11
 ENV UBUNTU_NAME=hirsute
 
