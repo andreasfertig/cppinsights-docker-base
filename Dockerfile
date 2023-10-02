@@ -14,7 +14,7 @@ RUN apt-get update &&                                                           
 #    apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 1E9377A2BA9EF27F &&                                   \
     echo "deb http://apt.llvm.org/${UBUNTU_NAME}/ llvm-toolchain-${UBUNTU_NAME}-${CLANG_VERSION} main" >> /etc/apt/sources.list && \
     wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key | apt-key add - &&                                        \
-    apt-get update && apt-get install -y --no-install-recommends libstdc++-${GCC_VERSION}-dev libc++-${CLANG_VERSION}-dev libclang-${CLANG_VERSION}-dev &&  \
+    apt-get update && apt-get install -y --no-install-recommends libstdc++-${GCC_VERSION}-dev libc++-${CLANG_VERSION}-dev libclang-${CLANG_VERSION}-dev libstdc++-${GCC_VERSION}-dev libzstd-dev &&  \
     apt-get remove --purge --auto-remove -y --force-yes wget dirmngr &&                                            \
     apt-get clean &&                                                                                               \
     rm -rf /var/lib/apt/lists/* &&                                                                                 \
