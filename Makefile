@@ -1,4 +1,7 @@
 all: build
 
+ARGS :=
+
 build:
-	@docker build -t andreasfertig/cppinsights-docker-base `pwd`
+	@docker buildx build $(ARGS) --platform linux/arm64,linux/amd64 -t andreasfertig/cppinsights-docker-base `pwd`
+
