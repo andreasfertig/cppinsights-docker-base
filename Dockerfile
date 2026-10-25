@@ -2,7 +2,7 @@ FROM ubuntu:24.04
 
 LABEL maintainer "Andreas Fertig"
 
-ENV CLANG_VERSION=21
+ENV CLANG_VERSION=23
 ENV GCC_VERSION=16
 ENV UBUNTU_NAME=noble
 
